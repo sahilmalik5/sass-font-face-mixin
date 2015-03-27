@@ -1,0 +1,20 @@
+// Font Face
+@mixin font-face($name, $font-file-name, $font-files, $eot: false, $font-weight:normal,$font-style:normal) {
+  $font-files: font-files('#{$font-file-name}.woff', woff, '#{$font-file-name}.ttf',truetype,'#{$font-file-name}.svg##{$name}',svg);
+  $iefont: unquote("#{$eot}?#iefix");
+  @font-face {
+    font-family: quote($name);
+    $eot : font-url('#{$font-file-name}.eot', truetype);
+    @if $eot {
+      src: url("#{$eot}");
+      $font-files: font-url('#{$eot}?#iefix') unquote("format('embedded-opentype')"), $font-files;
+    }
+    src: $font-files;
+    @if $font-weight {
+      font-weight: $font-weight;
+    }
+    @if $font-style {
+      font-style: $font-style;
+    }
+  }
+}
