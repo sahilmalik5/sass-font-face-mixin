@@ -9,6 +9,7 @@ Font Face Sass Mixin File to be `@imported` and `@included` as you need.
 The purpose of this directory is to facilitate the use of Font Face on different browsers avoiding HARD TO READ and NEVER ENDING css files.
 
 From: http://compass-style.org/reference/compass/css3/font_face/
+
 http://www.fontsquirrel.com/tools/webfont-generator
 
 
@@ -25,13 +26,14 @@ $eot is required by IE, and is a relative location of the eot file using "#".
 $weight shows if the font is bold, defaults to normal
 $style defaults to normal, might be also italic. Order of the includes matters, and it is: normal, bold, italic, bold+italic
 
-## Include Fonyt Face Sass Mixin in your project 
+## Include Font Face Sass Mixin in your project 
     sass
    // Import the mixins
    @import "font-face.scss"
 
    // Call Mixins
    @include font-face ('oswaldbold','oswald.bold-webfont','#oswaldbold');
+   
    @include font-face ('oswaldregular','oswald.regular-webfont','#oswaldregular');
    
 
