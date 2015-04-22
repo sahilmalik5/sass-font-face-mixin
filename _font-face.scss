@@ -7,7 +7,7 @@
     $eot : font-url('#{$font-file-name}.eot', truetype);
     @if $eot {
       src: url("#{$eot}");
-      $font-files: font-url('#{$eot}?#iefix') unquote("format('embedded-opentype')"), $font-files;
+      $font-files: url('#{$eot}?#iefix') unquote("format('embedded-opentype')"), $font-files;
     }
     src: $font-files;
     @if $font-weight {
